@@ -1,6 +1,5 @@
 
-
-const Input = require("./lib/Input");
+const {init} = require("./lib/Input");
 
 // Function call to initialize app
 init();

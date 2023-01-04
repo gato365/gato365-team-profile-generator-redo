@@ -33,3 +33,5 @@ const internInfo = teamInfoJSON.filter( element => element.role =="Intern")
 
 
 console.log(managerInfo);
+console.log(engineerInfo);
+console.log(internInfo);

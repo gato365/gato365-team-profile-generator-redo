@@ -14,11 +14,7 @@ const { readFileSync, promises: fsPromises } = require('fs');
 // -----------------Function Definitions--------------------
 function syncReadFile(filename) {
   const contents = readFileSync(filename, 'utf-8');
-
   const arr = contents.split(/\r?\n/);
-
-  // console.log(arr); // 👉️ ['One', 'Two', 'Three', 'Four']
-
   return arr;
 }
 
@@ -34,18 +30,7 @@ const internInfo = teamInfoJSON.filter(element => element.role == "Intern")
 
 
 
-
-
-
-
-
-
 // Created a Mechanism to have the card be in a grid
-
-
-
-//   typeEmployee = "image.jpg"
-//   teamInformation = "description"
 
 const teamName = managerInfo.teamInfo
 
@@ -57,20 +42,20 @@ let decription;
 
 // Determine Team Information
 if (teamName === "The Alliance") {
-  managerPic = "vince-mcmahon.jpg";
-  engineerPic = "stephanie-mcmahon.jpg";
-  internPic = "shane-mcmahon.jpg";
+  managerPic = "../assets/images/vince-mcmahon.jpg";
+  engineerPic = "../assets/images/stephanie-mcmahon.jpg";
+  internPic = "../assets/images/shane-mcmahon.jpg";
   decription = "The Alliance, also known as Team WCW/ECW and The Coalition, was a professional wrestling stable in the World Wrestling Federation (WWF, now WWE) that existed during the Invasion storyline from July to November 2001.";
 
 } else if (teamName === "Rock 'n' Sock") {
-  managerPic = "the-rock.jpg";
-  engineerPic = "mike-foley.jpg";
-  internPic = "mr-socko.jpg";
+  managerPic = "../assets/images/the-rock.jpg";
+  engineerPic = "../assets/images/mike-foley.jpg";
+  internPic = "../assets/images/mr-socko.jpg";
   decription = "The Rock 'n' Sock Connection was a professional wrestling tag team of The Rock and Mankind/Mick Foley who wrestled in the World Wrestling Federation between 1999 and 2000 and briefly in 2004. As a team, they held the WWF Tag Team Championship three times";
 } else if (teamName === "D-Generation X") {
-  managerPic = "chyna.jpg";
-  engineerPic = "triple-h.jpg";
-  internPic = "xpac.jpg";
+  managerPic = "../assets/images/chyna.jpg";
+  engineerPic = "../assets/images/triple-h.jpg";
+  internPic = "../assets/images/xpac.jpg";
   decription = "The group originated in the World Wrestling Federation (WWF, now known as WWE) in the midst of the \"Attitude Era\" in 1997 as a foil to another prominent faction, The Hart Foundation and became one of the main driving forces behind the WWF competing with World Championship Wrestling (WCW) in the Monday Night Wars. In addition to two other founding members Chyna and Rick Rude aside from Michaels and Triple H, the group expanded with new additions X-Pac, The New Age Outlaws (Road Dogg and Billy Gunn), and Tori until it disbanded in August 2000. ";
 }
 
@@ -179,3 +164,7 @@ ${decription}
 </body>
 
 </html>`
+
+
+// const teamStr = JSON.stringify(teamList);
+writeToFile('team_page.html', htmlPage);

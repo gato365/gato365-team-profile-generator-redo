@@ -34,28 +34,7 @@ const internInfo = teamInfoJSON.filter(element => element.role == "Intern")
 
 
 
-// `<!DOCTYPE html>
-// <html>
 
-// <head>
-//     <meta name="viewport" content="width=device-width, initial-scale=1" />
-//     <!-- Bootstrap CSS -->
-//     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-//         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-//         </head>
-
-//         <body>
-
-//         <!-- Name of Page -->
-//     <title>${teamInfo.____} Page </title>
-//     <!-- Insert Manager Info -->
-//     ${displayEngineers(teamInfo.___)}
-//     <!-- Insert Interns Info -->
-//     ${displayInterns(teamInfo.___)}
-
-// </body>
-
-// </html>`
 
 
 // chatGPT Entry: Generate dynamic bootstrap code that creates a grid of cards  based a list of template literals.
@@ -100,6 +79,11 @@ const internInfo = teamInfoJSON.filter(element => element.role == "Intern")
 
 const teamName = managerInfo.teamInfo
 
+let managerPic;
+let engineerPic;
+let internPic;
+let decription;
+
 
 // Determine Team Information
 if (teamName === "The Alliance") {
@@ -126,7 +110,7 @@ if (teamName === "The Alliance") {
 
 
 // Manager
-`<div class="card">
+const managerHTML = `<div class="card">
 <img src="${managerPic}" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">${managerInfo.name}</h5>
@@ -192,4 +176,32 @@ const internHTML = `<div class="container">
 </div>`;
 
 
-console.log(internHTML);
+const htmlPage = `<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+
+        <body>
+
+    <!-- Name of Page -->
+    <title>${teamName} Page </title>
+    <!-- Insert Manager Info -->
+    <h2> Manager Information </h2>
+    ${managerHTML}
+
+    <!-- Insert Engineers Info -->
+    <h2> Engineer(s) Information </h2>
+    ${engineerHTML}
+
+    <!-- Insert Interns Info -->
+    <h2> Intern(s) Information </h2>
+    ${internHTML}
+
+</body>
+
+</html>`

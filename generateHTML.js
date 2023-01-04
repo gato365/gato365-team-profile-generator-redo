@@ -1,5 +1,5 @@
 const { readFileSync, promises: fsPromises } = require('fs');
-
+const fs = require('fs');
 
 // -----------------Function Definitions--------------------
 // Author: Immanuel Williams PhD 
@@ -165,6 +165,18 @@ ${decription}
 
 </html>`
 
-
+// -----------------Function Definitions--------------------
+// Author: Immanuel Williams PhD 
+// Date Created: (FLEX Staff)
+// Date Modified: 11/27/2022
+// Name: writeToFile
+// Purpose: writes the markdown file to a file based on the data input of data filename
+// Input: fileName, Data
+// Output: NA
+// Notes: NA
+// -----------------Function Definitions--------------------
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => err ? console.log(err) : console.log('Success!'));
+}
 // const teamStr = JSON.stringify(teamList);
 writeToFile('team_page.html', htmlPage);

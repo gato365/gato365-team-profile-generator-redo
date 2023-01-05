@@ -1,4 +1,4 @@
-const generateHTML = require('../lib/Manager');
+const Manager = require('../lib/Manager');
 
 test("We can create a Manager with name, id, and email", async () => {
 

@@ -1,7 +1,5 @@
 const Engineer = require("../lib/Engineer");
 
-
-
 test("We can create a engineer with name, id, and email", async () => {
 
     // Setup 
@@ -15,9 +13,9 @@ test("We can create a engineer with name, id, and email", async () => {
 
     // Verify the Result
     expect(engineer.name).toBe(name);
-    expect(engineer.id).toBe(id); 
+    expect(engineer.id).toBe(id);
     expect(engineer.email).toBe(email);
-    
+
 
 
 });
@@ -31,13 +29,14 @@ describe("This Describe Block is for Engineer Functions", () => {
         const name = "James Williams";
         const id = "123";
         const email = "james@williams.com";
-        const engineer = new Engineer(name, id, email);
+        const gitHubAccount = "jaimeruner"
+        const engineer = new Engineer(name, id, email, gitHubAccount);
 
         // Running the Code
-        const result = engineer.getEmail();
+        const result = engineer.getGitHubAccount();
 
         // Verify the Result
-        expect(result).toBe(email);
+        expect(result).toBe(gitHubAccount);
 
 
     });
@@ -48,14 +47,14 @@ describe("This Describe Block is for Engineer Functions", () => {
     test("We are looing for a good role", async () => {
 
         // Setup 
-    const name = "James Williams";
-    const id = "123";
-    const email = "james@williams.com";
-    const gitHubAccount = "jaimeruner"
-    const engineer = new Engineer(name, id, email, gitHubAccount);
+        const name = "James Williams";
+        const id = "123";
+        const email = "james@williams.com";
+        const gitHubAccount = "jaimeruner"
+        const engineer = new Engineer(name, id, email, gitHubAccount);
 
         // Running the Code
-        const result = engineer.getGitHubAccount();
+        const result = engineer.getRole();
 
         // Verify the Result
         expect(result).toBe('Engineer');

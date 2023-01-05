@@ -19,13 +19,17 @@ Due to time, I thought it would be ideal for me to list what this project is mis
 
 
 
-## 1. Command Line Questions
+## 1. Command Line Questions (FIXED)
 Dynamically ask questions to the user regarding teams information in that after the manager’s information is given, the option to either answer questions about the intern or engineer or leave the application. If the user wants to answer questions regarding the engineer then afterwards the user is prompt either to answer questions about the intern or leave. If the user wants to answer questions about the intern after the manager, once done the program exits.
 
+Had to use Switch Statements
 
-## 2. Make another Class
+
+## 2. Make another Class (Got it!!)
 Create an input class that stores the user’s information so that it could be called within the index.js file.
 
+## 3. Fixed Test functionality (Did this too :) ) 
+Create tests to determine classes worked correctly.
 
-## 3. Enhance HTML and CSS 
+## 4. Enhance HTML and CSS (Still an issue)
 Make my html file prettier! I would also want to add the feature regarding emails for managers and allow the user to go to the engineers GitHub account.

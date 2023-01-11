@@ -33,6 +33,9 @@ When implementing this application, the following steps must be taken
 6.	If you decide the team is finished, click that button, and the HTML will be generated.
 
 
+### Video Demonstration
+
+
 ## Potential Updates
 
 ### 1. Command Line Questions (FIXED)
